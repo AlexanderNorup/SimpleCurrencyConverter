@@ -1,0 +1,19 @@
+name: Build Xamarin App
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate Xamarin Form Android APK
+        # You may pin to the exact commit or the version.
+        # uses: fahimshahrierrasel/Xamarin-Droid-Builder@3b0a1d8692d8ca70d3811f4f79743551da24cc60
+        uses: fahimshahrierrasel/Xamarin-Droid-Builder@1.0.2
+        with:
+          # Solution Name or the root folder name.
+          SOLUTION_NAME: SimpleCurrencyConverter.sln
+          # Android Project name or the folder name of the android project usually its end with .Android as postfix.
+          ANDROID_PROJECT_NAME: SimpleCurrencyConverter/SimpleCurrencyConverter.Android
