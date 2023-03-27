@@ -2,7 +2,7 @@ name: Build Xamarin App
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   Explore-GitHub-Actions:
