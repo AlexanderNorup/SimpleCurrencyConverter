@@ -2,7 +2,7 @@
 
 ![Simple Currency Converter Logo](github_assets/icon.png)
 
-<img src="github_assets/screenshot.jpg" alt="App Screenshot" style="zoom:33%;" />
+<img src="github_assets/screenshot.jpg" alt="App Screenshot" width=200 />
 
 This is a very simple Xamarin App (for Android, but I guess you're welcome to adapt it to iOS).
 
