@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SimpleCurrencyConverter.MainPage">
+
+    <ScrollView>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Simple Currency Converter" HorizontalTextAlignment="Center" TextColor="White" FontSize="30"/>
+            </Frame>
+            <StackLayout Padding="30,10,30,10">
+                <FlexLayout Direction="row" JustifyContent="SpaceBetween" AlignItems="Center">
+                    <Label Text="Input:" FontSize="Title" />
+                    <Picker WidthRequest="200" x:Name="InputCurrency" />
+                </FlexLayout>
+                <Entry x:Name="InputValue" Keyboard="Numeric" FontSize="Large" HorizontalTextAlignment="Center" />
+
+                <Button Margin="0,40,0,0"  Text="Swap currencies"/>
+
+                <FlexLayout Margin="0,40,0,0" Direction="row" JustifyContent="SpaceBetween">
+                    <Label Text="Output: " FontSize="Title" />
+                    <Picker WidthRequest="200" x:Name="OutputCurrency" />
+                </FlexLayout>
+                <Label x:Name="OutputValue" Text="EUR 0" FontSize="Large" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+                <FlexLayout Margin="0,10,0,0" Direction="row" AlignItems="Center" JustifyContent="Center">
+                    <CheckBox x:Name="checkBox" />
+                    <Label Text="Add sales tax to result?"/>
+                </FlexLayout>
+                <FlexLayout Margin="0,10,0,0" Direction="row" IsVisible="{Binding Source={x:Reference checkBox}, Path=IsChecked}" AlignItems="Center" JustifyContent="SpaceBetween">
+                    <Label Text="Sales tax rate: " FontSize="Small" />
+                    <Entry WidthRequest="200" FontSize="Small"  Keyboard="Numeric" x:Name="SalesTax" />
+                    <Picker FontSize="Small" x:Name="SalesTaxStatePicker" />
+                </FlexLayout>
+            </StackLayout>
+            <StackLayout Margin="0,40,0,0" Padding="30,10,30,10" >
+                <Label Text="Exchange rates last fetched: xxxx-xx-xx"/>
+                <Button x:Name="UpdateRatesBtn" FontSize="Small" Text="Update rates now" />
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
