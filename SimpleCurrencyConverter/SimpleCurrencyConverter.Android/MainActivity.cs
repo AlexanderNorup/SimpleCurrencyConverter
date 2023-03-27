@@ -5,6 +5,7 @@ using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
 using Xamarin.Essentials;
+using System.Globalization;
 
 namespace SimpleCurrencyConverter.Droid
 {
@@ -13,6 +14,7 @@ namespace SimpleCurrencyConverter.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
             base.OnCreate(savedInstanceState);
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
