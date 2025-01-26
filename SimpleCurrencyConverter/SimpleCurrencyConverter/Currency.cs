@@ -17,7 +17,7 @@ namespace SimpleCurrencyConverter
         {
             if (cachedParseRate is null)
             {
-                if (double.TryParse(Rate, out var r))
+                if (double.TryParse(Rate, NumberStyles.Any, CultureInfo.InvariantCulture, out var r))
                 {
                     cachedParseRate = r;
                 }
@@ -31,7 +31,7 @@ namespace SimpleCurrencyConverter
 
         public override string ToString()
         {
-            return Desc + " (" + ParsedRate.ToString(CultureInfo.InvariantCulture) + ")";
+            return Desc + " (" + ParsedRate.ToString() + ")";
         }
 
         public override bool Equals(object obj)

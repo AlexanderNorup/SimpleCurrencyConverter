@@ -14,7 +14,6 @@ namespace SimpleCurrencyConverter.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
             base.OnCreate(savedInstanceState);
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);

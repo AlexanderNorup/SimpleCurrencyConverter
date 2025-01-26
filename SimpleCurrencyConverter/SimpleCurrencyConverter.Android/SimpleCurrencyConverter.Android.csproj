@@ -106,9 +106,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\alex-tu.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\mipmap-hdpi\icon_adaptive_back.png" />
   </ItemGroup>
   <ItemGroup>

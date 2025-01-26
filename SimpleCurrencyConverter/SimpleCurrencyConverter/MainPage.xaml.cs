@@ -82,7 +82,7 @@ namespace SimpleCurrencyConverter
 
         private void ApplySavedState()
         {
-            SalesTax.Text = _stateManager.ExchangeViewState.LastSalesTaxValue.ToString(CultureInfo.InvariantCulture);
+            SalesTax.Text = _stateManager.ExchangeViewState.LastSalesTaxValue.ToString();
             UseSalesTax.IsChecked = _stateManager.ExchangeViewState.UseSalesTax;
 
             InputCurrency.SelectedIndex = InputCurrency.ItemsSource.IndexOf(_stateManager.ExchangeViewState.SelectedInputCurrency);
@@ -129,7 +129,7 @@ namespace SimpleCurrencyConverter
                 totalConvertedToOutput = dkkTotal / (outputCurrency.ParsedRate / 100d);
             }
 
-            OutputValue.Text = outputCurrency.Code + " " + totalConvertedToOutput.ToString("0.00", CultureInfo.InvariantCulture);
+            OutputValue.Text = outputCurrency.Code + " " + totalConvertedToOutput.ToString("0.00");
         }
 
         private async void UpdateExchangeRatesClicked(object sender, EventArgs e)
@@ -179,7 +179,7 @@ namespace SimpleCurrencyConverter
 
         private void StateSelectionChanged(object sender, EventArgs e)
         {
-            SalesTax.Text = (SalesTaxStatePicker.SelectedItem as SalesTaxEntry)?.Rate.ToString(CultureInfo.InvariantCulture) ?? "<unparseable item>";
+            SalesTax.Text = (SalesTaxStatePicker.SelectedItem as SalesTaxEntry)?.Rate.ToString() ?? "<unparseable item>";
             DoCalculations();
         }
 
